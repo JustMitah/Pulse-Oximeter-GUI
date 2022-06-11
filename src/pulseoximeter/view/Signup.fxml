@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="signup" prefHeight="325.0" prefWidth="617.0" style="-fx-background-color: #66A4EA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulseoximeter.view.SignupController">
+   <children>
+      <ImageView fitHeight="363.0" fitWidth="328.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/392.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="255.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/back-button.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="255.0" layoutY="177.0" onAction="#goBack" text=" " />
+      <Label layoutX="90.0" layoutY="179.0" prefHeight="17.0" prefWidth="165.0" text="Sign up and keep track of your health!">
+         <font>
+            <Font name="Arial Nova Cond Light Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="595.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-close-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="595.0" layoutY="-3.0" onMouseClicked="#CloseApp" prefHeight="17.0" prefWidth="20.0" text=" " />
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="578.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-minimize-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="578.0" layoutY="-3.0" onMouseClicked="#MinApp" prefHeight="17.0" prefWidth="20.0" text=" " />
+      <TextField fx:id="Username" layoutX="400.0" layoutY="45.0" />
+      <Text fill="WHITE" layoutX="400.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="400.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="400.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REPEAT PASSWORD">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="400.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEX">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Text>
+      <JFXRadioButton layoutX="402.0" layoutY="98.0" styleClass="custom-jfx-radio-button-blue" stylesheets="@../css/Signup.css" text="FEMALE" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="485.0" layoutY="98.0" styleClass="custom-jfx-radio-button-blue" stylesheets="@../css/Signup.css" text="MALE" textFill="WHITE" toggleGroup="$group">
+         <font>
+            <Font name="Agency FB" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton layoutX="429.0" layoutY="289.0" onAction="#register" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: white;" text="Register" />
+      <Text fill="WHITE" layoutX="400.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF BIRTH">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="DoB" layoutX="398.0" layoutY="141.0" prefHeight="25.0" prefWidth="149.0" />
+      <PasswordField fx:id="Password" layoutX="400.0" layoutY="190.0" />
+      <PasswordField fx:id="Rpassword" layoutX="400.0" layoutY="251.0" />
+   </children>
+</AnchorPane>

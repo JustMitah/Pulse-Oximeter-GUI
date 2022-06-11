@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="332.0" prefWidth="600.0" style="-fx-background-color: #000850;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulseoximeter.view.PoMainController">
+   <children>
+      <ImageView fitHeight="225.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pulse-oximeter.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="LoginPane" layoutX="14.0" layoutY="26.0" prefHeight="286.0" prefWidth="224.0" style="-fx-background-radius: 30; -fx-background-color: #66A4EA;">
+         <children>
+            <ImageView fx:id="ImgB" fitHeight="23.0" fitWidth="25.0" layoutX="183.0" layoutY="15.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/back-button.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="HeadLabel" layoutX="79.0" layoutY="39.0" prefHeight="28.0" prefWidth="72.0" text="SIGN IN">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="Username" layoutX="36.0" layoutY="84.0" prefHeight="25.0" prefWidth="153.0" promptText="Username" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="Password" layoutX="36.0" layoutY="135.0" prefHeight="25.0" prefWidth="153.0" promptText="Password" unFocusColor="WHITE" />
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="36.0" layoutY="190.0" onAction="#login" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #000850; -fx-background-radius: 30;" text="Login" textFill="WHITE" />
+            <Hyperlink fx:id="forgot" layoutX="61.0" layoutY="228.0" style="-fx-background-color: #66A4EA;" text="Forgot Password?" textFill="WHITE" underline="true" />
+            <ImageView fitHeight="28.0" fitWidth="20.0" layoutX="163.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/support.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Img" fitHeight="25.0" fitWidth="29.0" layoutX="183.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/867-8678512_doctor-icon-physician.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="question" layoutX="142.0" layoutY="13.0" prefHeight="28.0" prefWidth="43.0" text="A doctor?">
+               <font>
+                  <Font name="Arial Nova Cond Light" size="11.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="186.0" layoutY="14.0" onMouseClicked="#changeLogintoDoctor" text=" " />
+         </children></AnchorPane>
+      <Label layoutX="263.0" layoutY="225.0" prefHeight="57.0" prefWidth="286.0" text="Pulse Oximeter App" textAlignment="CENTER" textFill="#e1dada">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signup" buttonType="RAISED" layoutX="281.0" layoutY="288.0" onAction="#signup" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="Sign Up" />
+      <Label layoutX="406.0" layoutY="292.0" text="or" textFill="#f8f8f8" />
+      <JFXButton buttonType="RAISED" layoutX="440.0" layoutY="289.0" onAction="#goToTest" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 30;" text="Quick Testing" />
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="578.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-close-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="578.0" layoutY="-1.0" onMouseClicked="#CloseApp" prefHeight="17.0" prefWidth="20.0" text=" " />
+      <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="559.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-minimize-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="559.0" layoutY="-1.0" onMouseClicked="#MinApp" prefHeight="17.0" prefWidth="20.0" text=" " />
+   </children>
+</AnchorPane>

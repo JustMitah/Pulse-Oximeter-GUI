@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" fx:id="QuickTest" prefHeight="349.0" prefWidth="600.0" style="-fx-background-color: #9ed2e7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulseoximeter.view.QuickTestingController">
+   <children>
+      <ImageView fitHeight="221.0" fitWidth="602.0" layoutY="131.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pulse-oximeter.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="576.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-close-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="579.0" layoutY="-1.0" onMouseClicked="#CloseApp" prefHeight="20.0" prefWidth="20.0" text=" " />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-minimize-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="557.0" layoutY="2.0" onMouseClicked="#MinApp" prefHeight="17.0" prefWidth="20.0" text=" " />
+      <Label layoutX="40.0" layoutY="14.0" text="Quick Testing is only for checking without follow up...">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="31.0" text=" If you wish for doctor analysis, please go back and signup">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="4.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/warning-error-pngrepo-com.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="375.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/back-button.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="375.0" layoutY="27.0" onAction="#goBack" text=" " />
+      <WebView fx:id="webView" layoutX="38.0" layoutY="58.0" prefHeight="268.0" prefWidth="530.0" />
+      <JFXButton buttonType="RAISED" layoutX="404.0" layoutY="28.0" onAction="#MeasureArduino" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #000850; -fx-background-radius: 30;" text="Measure Again" textFill="WHITE" />
+   </children>
+</AnchorPane>

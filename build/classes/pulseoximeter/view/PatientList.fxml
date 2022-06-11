@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="PatientList" prefHeight="349.0" prefWidth="600.0" style="-fx-background-color: #9ed2e7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulseoximeter.view.PatientListController">
+   <children>
+      <ImageView fitHeight="221.0" fitWidth="602.0" layoutY="131.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pulse-oximeter.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="576.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-close-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="579.0" layoutY="-1.0" onMouseClicked="#CloseApp" prefHeight="20.0" prefWidth="20.0" text=" " />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-minimize-window-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="557.0" layoutY="2.0" onMouseClicked="#MinApp" prefHeight="17.0" prefWidth="20.0" text=" " />
+      <Label layoutX="32.0" layoutY="20.0" prefHeight="27.0" prefWidth="111.0" text="Welcome, Dr">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="docname" layoutX="145.0" layoutY="20.0" prefHeight="27.0" prefWidth="93.0" text="Username">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="238.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/back-button.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="238.0" layoutY="21.0" onAction="#goBack" text=" " />
+      <TableView fx:id="DisplayPatients" layoutX="88.0" layoutY="56.0" prefHeight="260.0" prefWidth="383.0" stylesheets="@../css/TableCSS.css">
+        <columns>
+          <TableColumn fx:id="pid" prefWidth="75.0" text="PatientID" />
+          <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="sex" prefWidth="75.0" text="Sex" />
+            <TableColumn fx:id="dob" prefWidth="88.0" text="Date of Birth" />
+            <TableColumn fx:id="status" prefWidth="70.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
