@@ -1,2 +1,2 @@
 # Pulse-Oximeter-GUI
-Connected to a MySQL Database &lt;br> Login and Register Forms &lt;br> Oximeter Display Results
+Connected to a MySQL Database <br> Login and Register Forms <br> Oximeter Display Results
